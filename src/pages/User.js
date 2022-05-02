@@ -181,7 +181,7 @@ export default function User() {
                         <TableCell align="left">{row.perfil_desc}</TableCell>                        
                         <TableCell align="left">
                           <Label variant="ghost" color={(row.status === 'banned' && 'error') || 'success'}>
-                            {sentenceCase(row.status)}
+                            {sentenceCase(row.status === 'A' ? "Ativo" : "Inativo")}
                           </Label>
                         </TableCell>
                         <TableCell align="left">{fDate(row.dt_aprovacao)}</TableCell>
